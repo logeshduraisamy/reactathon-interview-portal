@@ -10,22 +10,23 @@ import {
 import Home from "./Home";
 import Apply from "./Apply";
 import Applied from "./Applied";
-
+import Contact from "./Contact";
 class App extends Component {
   render() {
     return (
       <HashRouter>
       <div>
-         <h1>Verizon Recruitment Portal</h1>
          <ul className="header">
-           <li><NavLink to="/">Home</NavLink></li>
-           <li><NavLink to="/apply">Apply for a Job</NavLink></li>
-           <li><NavLink to="/applied">Jobs Applied</NavLink></li>
+           <li><NavLink to="/"><h2>Home</h2></NavLink></li>
+           <li><NavLink to="/apply"><h2>Apply</h2></NavLink></li>
+           <li><NavLink to="/applied"><h2>Jobs Applied</h2></NavLink></li>
+           <li><NavLink to="/contact"><h2>Contact Us</h2></NavLink></li>
          </ul>
          <div className="content">
            <Route exact path="/" component={Home}/>
            <Route path="/apply" component={Apply}/>
            <Route path="/applied" component={Applied}/>
+            <Route path="/contact" component={Contact}/>
          </div>
        </div>
        </HashRouter>

@@ -6,13 +6,16 @@ import {connect} from 'react-redux';
 class Applied extends Component {
   render() {
         if (!this.props.job) {
-            return (<div> You have not applied for any job</div>);
+            return (<div><h2> You have not applied for any job</h2></div>);
         }
         return (
             <div>
-                <h2>{this.props.job.name}</h2>
-                <h3>Exp: {this.props.job.experience}</h3>
-                <h3>skillset: {this.props.job.skillset}</h3>
+                <h2>You have applied for the below job posting</h2>
+                <p>Name: {this.props.job.job_name}</p>
+                <p>Job id: {this.props.job.job_id}</p>
+                <p>Experience: {this.props.job.experience}</p>
+                <p>Skill set: {this.props.job.skillset}</p>
+                <h2>Thanks for your interest. You will receive a Email detailing the interview schedule</h2>
             </div>
         );
     }
